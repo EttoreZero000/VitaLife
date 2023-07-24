@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/formulario.css">
+
+    <script src="Java/java.js"></script>
+    <script src="Java/formulario.js"></script>
+    <title>VitaLife</title>
+</head>
+<body>
+    <div class="contenedor"></div>
+    <div class="menu">
+        <img class="logoMenu" src="img/Logo.png" alt="Logo" onclick="toggleMenu()">
+
+        <H1>VitaLife</H1>
+
+        <div class="menu-desplegable" id="menuDesplegable">
+            <ul>
+                <img class="logoMenu2" src="img/Logo.png" alt="Logo" onclick="toggleMenu()">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Aplicaciones</a></li>
+                <li>VitaLife@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu_botones">
+        <button class="Btn_Registrar" onclick="mostrarFormulario('registrar')">Registrar</button>
+        <button class="Btn_Iniciar" onclick="mostrarFormulario('iniciar')">Iniciar Sesión</button>
+    </div>
+    
+    <!-- Cuadro modal -->
+    <div class="modal" id="formularioModal">
+        <div class="modal-contenido">
+            <h2 id="modalTitulo">Formulario de Registro o Inicio de Sesión</h2>
+            <form id="formulario" class="formulario-centrado">
+                <!-- Aquí se agregará el contenido del formulario según el tipo -->
+            </form>
+            <button class="cerrarModal" onclick="cerrarFormulario()">Cerrar</button>
+        </div>
+    </div>
+</body>
+</html>

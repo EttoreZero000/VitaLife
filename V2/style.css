@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "RenogareRegular";
+  src: url(font/Renogare-Regular.otf);
+}
+
+body {
+  margin: 0;
+  background-color: #A2D4F2;
+  display: flex;
+  flex-direction: column;
+  /* Alinear los divs horizontalmente */
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 80vh;
+}
+
+.menu {
+  height: 20vh;
+  width: 60%;
+  background-color: #414AF2;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  min-height: 100px;
+  position: relative;
+}
+
+.logoMenu {
+  height: 20vh;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  animation: cambioLogo1 2s ease-in-out infinite;
+}
+@keyframes cambioLogo1 {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+.logoMenu:hover {
+  animation: cambioLogo2 0.6s linear infinite;
+}
+
+@keyframes cambioLogo2 {
+  0% {
+    filter: hue-rotate(0deg); /* Tono original (sin cambios) */
+    box-shadow: none;
+  }
+  50% {
+    filter: hue-rotate(20deg); /* Cambiar el tono a 180 grados */
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    filter: hue-rotate(0deg); /* Tono original (sin cambios) */
+    box-shadow: none;
+  }
+}
+
+.menu h1 {
+  font-family: RenogareRegular;
+  color: #171559;
+  padding-left: 2.2vh;
+  white-space: nowrap;
+  font-size: 50px;
+  margin: 0;
+}
+
+.menu-desplegable {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 20.6vh;
+  height: 100vh;
+  background-color: #414AF2;
+  padding: 0px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 0.6s;
+  border-bottom-right-radius: 100ch;
+}
+
+.logoMenu2 {
+  height: 20vh;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.menu-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.menu-desplegable li {
+  padding: 0px 0;
+  font-family: RenogareRegular;
+}
+
+.menu-desplegable ul li:nth-last-child(-n+1) {
+  position: relative;
+  margin-top: 50px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menu-desplegable a {
+  text-decoration: none;
+  color: #171559;
+  font-size: 2.5vh;
+}
+
+.menu-desplegable a:hover {
+  color: #A2D4F2;
+}
+
+.menu_botones {
+  height: 20vh;
+  width: 50%;
+  background-color: #414AF2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Alineamos los elementos a la derecha */
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Estilos para los botones en el menú_botones */
+.menu_botones button {
+  margin-right: 50px;
+  /* Ajustar espacio entre los botones */
+  padding: 10px 40px;
+  background-color: #A2D4F2;
+  color: #171559;
+  border: none;
+  cursor: pointer;
+  font-size: 3vh;
+  font-family: RenogareRegular;
+  border-radius: 50vh;
+
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100px;
+  min-height: 100px;
+
+  font-size: calc(16px + 0.5vw); /* 16px + 0.5% del ancho de la ventana */
+  /* Proporciona un tamaño mínimo para la fuente (16px en este caso) */
+  font-size: max(16px, calc(16px + 0.5vw));
+  /* Proporciona un tamaño máximo para la fuente (por ejemplo, 24px) */
+  font-size: min(max(16px, calc(16px + 0.5vw)), 24px);
+}
+
+@media (min-width: 768px) {
+  .menu_botones button {
+    font-size: 20px; /* Establece un tamaño fijo para los botones en pantallas más grandes */
+  }
+}
+
+@keyframes cambioBoton {
+  0% {
+    background-color: #A2D4F2;
+    color: #171559;
+    box-shadow: none;
+  }
+  50% {
+    background-color: #171559;
+    color: #A2D4F2;
+    box-shadow: 25px 25px 20px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    background-color: #171559;
+    color: #A2D4F2;
+    box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Agregar la animación al botón en el hover */
+.menu_botones button:hover {
+  animation: cambioBoton 0.5s ease-in-out forwards;
+}

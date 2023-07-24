@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "RenogareRegular";
+    src: url(font/Renogare-Regular.otf);
+}
+
+/* Estilos para el cuadro modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Añadir una transición para una animación más suave */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo para el botón de cerrar el modal */
+.cerrarModal {
+    background-color: #171559;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Resto de estilos para los botones, menú, etc. */
+
+/* Centrar verticalmente el contenido del cuadro modal */
+.modal-contenido {
+    /* ... otros estilos ... */
+    /* Centrar verticalmente el contenido del cuadro modal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 75px;
+    animation: aparecerDesdeDerecha 0.2s ease-in-out;
+}
+
+@keyframes aparecerDesdeDerecha {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Cambiar el color de fondo del cuadro modal */
+.modal-contenido {
+    background-color: #414AF2;
+}
+
+/*Editar el titulo del recuadro*/
+.modal-contenido h2 {
+    color: white;
+    font-size: 200%;
+    font-family: RenogareRegular;
+    color: #171559;
+}
+
+/*Editar los label del recuadro*/
+.modal-contenido label {
+    font-size: 200%;
+    font-family: RenogareRegular;
+    color: #171559;
+}
+
+/* Estilo para los campos de entrada */
+.modal-contenido input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    background-color: #A2D4F2;
+    font-size: 20px;
+
+    border-radius: 50px;
+}
+
+/* Estilo para el botón de enviar */
+.modal-contenido button {
+    background-color: #171559;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    /* Centrar el botón horizontalmente en el cuadro modal */
+    margin: 0 auto;
+    font-size: 2.5vh;
+}
+
+/* Cambiar el color del botón cuando se coloca sobre él */
+.modal-contenido button:hover {
+    background-color: #3c3c87;
+}
+
+/*.registro{
+    margin-left: 41.5%;
+    margin-bottom: 10px;
+    font-size: 3vh;
+}
+.iniciar{
+    margin-left: 39%;
+    margin-bottom: 10px;
+    font-size: 3vh;
+}*/

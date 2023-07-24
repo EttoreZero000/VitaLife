@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "RenogareRegular";
+  src: url(font/Renogare-Regular.otf);
+}
+
+body {
+  margin: 0%;
+  background-color: #A2D4F2;
+  
+}
+
+.menu {
+  height: 20vh;
+  width: 50%;
+  background-color: #414AF2;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 200px;
+  /* Tamaño mínimo de ancho para el div */
+  min-height: 100px;
+  /* Tamaño mínimo de alto para el div */
+  position: relative;
+
+}
+
+.logoMenu {
+  height: 20vh;
+
+  min-width: 100px;
+  /* Tamaño mínimo de ancho para la imagen */
+  min-height: 100px;
+  /* Tamaño mínimo de alto para la imagen */
+  max-width: 100%;
+  /* Asegura que la imagen no sea más ancha que el contenedor */
+  max-height: 100%;
+  /* Asegura que la imagen no sea más alta que el contenedor */
+
+}
+
+.menu h1 {
+  font-family: RenogareRegular;
+  color: #171559;
+  padding-left: 2.2vh;
+
+  white-space: nowrap;
+  /* Evita que el texto se ajuste automáticamente para caber dentro del contenedor */
+  font-size: 50px;
+  /* Tamaño del texto del h1, ajusta según tus necesidades */
+}
+
+.logoMenu {
+  cursor: pointer;
+}
+
+
+
+/*
+  MENU DEPEGABLE
+*/
+
+.menu-desplegable {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  /* Posición inicial fuera de la pantalla */
+  width: 20vh;
+  height: 100vh;
+  background-color: #414AF2;
+  padding: 0px;
+  box-shadow: 5 5 10px rgba(0, 0, 0, 0.2);
+  transition: ease-in-out 0.3s;
+}
+
+.logoMenu2 {
+  height: 20vh;
+
+  min-width: 100px;
+  /* Tamaño mínimo de ancho para la imagen */
+  min-height: 100px;
+  /* Tamaño mínimo de alto para la imagen */
+  max-width: 100%;
+  /* Asegura que la imagen no sea más ancha que el contenedor */
+  max-height: 100%;
+  /* Asegura que la imagen no sea más alta que el contenedor */
+}
+
+.menu-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  /* Usar el modelo flexible para ajustar el ancho de los elementos de la lista */
+  flex-direction: column;
+  /* Alinear los elementos verticalmente */
+
+  position: relative;
+  align-items: center;
+}
+
+.menu-desplegable li {
+  padding: 0px 0;
+}
+
+.menu-desplegable a {
+  font-family: RenogareRegular;
+  text-decoration: none;
+  color: #171559;
+  font-size: 2.5vh;
+}
+
+.menu-desplegable a:hover {
+  color: #A2D4F2;
+}
+
+/*
+MENU BOTONESS
+*/
+
+.menu_botones{
+  height: 20vh;
+  width: 50%;
+  background-color: #414AF2;
+
+
+}
